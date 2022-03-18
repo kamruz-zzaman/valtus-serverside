@@ -15,7 +15,6 @@ router.post('/', (req, res) => {
     const encodedImage = req.files.image.data.toString('base64');
     const image = Buffer.from(encodedImage, 'base64');
     const newBlog = {
-        ...req.body,
         createdAt: time,
         image,
     };
